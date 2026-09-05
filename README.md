@@ -103,18 +103,18 @@ The audio-topology approach was informed by [ToothTray](https://github.com/m2jea
 Licensed under [MIT](LICENSE). See [PUBLISHING.md](PUBLISHING.md) for publishing the source on GitHub.
 
 ## Launching from the Command Line
-If you are running the scripts manually from the current directory, use the following syntax depending on
+
 If you are running the scripts manually from the current directory, use the following syntax depending on your shell.
 
 **Command Prompt (cmd.exe):**
-`cmd
+```cmd
 build.cmd
 "C:\Path With Spaces\bluetooth-audio-connect\build.cmd"
-`
+```
 
 **PowerShell:**
-PowerShell requires an explicit relative path (.\) to execute scripts in the current directory. If the path contains spaces, you must use the call operator (&) and quotes:
-`powershell
+PowerShell requires an explicit relative path (`.\`) to execute scripts in the current directory. If the path contains spaces, you must use the call operator (`&`) and quotes:
+```powershell
 .\build.cmd
 & "C:\Path With Spaces\bluetooth-audio-connect\build.cmd"
-`
+```
