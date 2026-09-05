@@ -1,6 +1,10 @@
 # Bluetooth Audio Connect
 
-A small Windows command-line utility for connecting paired Bluetooth headphones, headsets or speakers and selecting them as your default audio device.
+**Connect paired Bluetooth headphones and switch Windows audio output from one shortcut.**
+
+Bluetooth Audio Connect is a small C# command-line utility for Windows headphones, headsets and speakers. Save a paired device once, then use the included launcher to request reconnection and select your audio defaults.
+
+**Experimental, source-only:** hardware validation is incomplete. See [testing status and known limitations](TESTING.md) before building or running.
 
 No installer, external packages, Settings automation, radio toggling, driver replacement or background service. Full C# source is included.
 
@@ -19,7 +23,7 @@ build.cmd
 
 This uses the compiler included with Windows .NET Framework and creates `bin\BluetoothAudioConnect.exe`. The build then runs seven offline tests. No package download or administrator privileges are required.
 
-**Validation status:** The generic source compiles, but McAfee quarantined the generated executable, as reported by the user. The detection name and cause are not yet confirmed. Runtime testing of this generic version is therefore incomplete. Do not bypass security software to run it. The device reconnect and default-audio mechanisms were tested in its earlier device-specific prototype. Other Bluetooth devices and drivers still need testing.
+See [TESTING.md](TESTING.md) for validation results and the unresolved local security detection.
 
 ## Quick start
 
@@ -82,6 +86,12 @@ Settings and the latest diagnostic log live in `%LOCALAPPDATA%\BluetoothAudioCon
 Source: `src/Program.cs` and `src/Native.cs`. Run `build.cmd` to compile and run offline tests. Tests cover exact matching, apostrophe normalization, duplicate names, container-based selection, missing devices and native structure sizes. They do not exercise hardware or change audio settings.
 
 The Windows CI workflow builds and runs these tests on pushes and pull requests. Hardware validation must be performed separately; see [TESTING.md](TESTING.md).
+
+## Help improve Bluetooth Audio Connect
+
+Documentation contributions are welcome. Browse [good first issues](https://github.com/ozkozk/bluetooth-audio-connect/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22) or read [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+
+For bug reports, include your Windows version, device model, command and error code. Remove personal device names and IDs from logs before sharing them. Hardware testing remains subject to the [testing and security guidance](TESTING.md).
 
 ## Technical references and attribution
 
