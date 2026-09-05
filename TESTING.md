@@ -1,5 +1,9 @@
 # Testing
 
+## Local security detection
+
+**Validation status:** The generic source compiles, but McAfee quarantined the generated executable, as reported by the user. The detection name and cause are not yet confirmed. Runtime testing of this generic version is therefore incomplete. Do not bypass security software to run it. The device reconnect and default-audio mechanisms were tested in its earlier device-specific prototype. Other Bluetooth devices and drivers still need testing.
+
 ## Automated
 
 Run build.cmd. Seven offline assertions exercise normalized/exact device matching, rejection of empty names, ambiguous/missing devices, GUID selection and x64 native structure layout. The current generic build compiled locally, but Windows security blocked execution, so those assertions have not yet run for this version. The configured CI has not been run yet.
