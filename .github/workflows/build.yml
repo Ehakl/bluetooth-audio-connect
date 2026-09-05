@@ -1,0 +1,12 @@
+name: Windows build and tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run offline tests
+        shell: cmd
+        run: build.cmd

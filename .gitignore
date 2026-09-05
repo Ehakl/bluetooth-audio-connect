@@ -1,0 +1,9 @@
+bin/
+obj/
+*.exe
+*.pdb
+*.zip
+*.lnk
+settings.txt
+last-run.txt
+.vs/
